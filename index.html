@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find your island escape at Palm Haven Resort. Explore our rooms and request your stay."
+    />
+    <title>Palm Haven Resort | Your Island Escape</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Palm Haven Resort home">
+        <span class="brand-mark" aria-hidden="true">PH</span>
+        <span class="brand-name">Palm Haven <span>Resort</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#stay">The Stay</a>
+        <a href="#about">Our Resort</a>
+        <a class="nav-cta" href="#booking">Book Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">A little closer to paradise</p>
+          <h1 id="hero-title">Make room for <em>slow days.</em></h1>
+          <p class="hero-copy">
+            Wake to ocean air, linger over lunch, and find your own way to unwind at Palm Haven.
+          </p>
+          <a class="button button-light" href="#booking">Plan your escape <span aria-hidden="true">→</span></a>
+        </div>
+        <a class="hero-scroll" href="#stay">Discover the resort <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="intro section-shell" id="about">
+        <p class="eyebrow">Welcome to Palm Haven</p>
+        <h2>Island time, <em>your way.</em></h2>
+        <p>
+          Tucked between tropical gardens and the sea, our resort is a place to reconnect,
+          recharge, and enjoy the moments in between.
+        </p>
+      </section>
+
+      <section class="stay-section section-shell" id="stay" aria-labelledby="stay-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Find your favorite view</p>
+            <h2 id="stay-title">A stay made for you</h2>
+          </div>
+          <a class="text-link" href="#booking">Explore availability <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="room-grid">
+          <article class="room-card">
+            <div class="room-image room-image-one" role="img" aria-label="Bright ocean-view villa"></div>
+            <div class="room-details">
+              <p class="room-type">Private escape</p>
+              <h3>Ocean View Villa</h3>
+              <p>Wake up to the sea in a spacious villa with a private terrace.</p>
+              <a href="#booking" data-room="Ocean View Villa">Book this stay <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="room-card">
+            <div class="room-image room-image-two" role="img" aria-label="Relaxing tropical suite"></div>
+            <div class="room-details">
+              <p class="room-type">Room to reconnect</p>
+              <h3>Family Suite</h3>
+              <p>Settle in together with extra space and all the comforts of home.</p>
+              <a href="#booking" data-room="Family Suite">Book this stay <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="room-card">
+            <div class="room-image room-image-three" role="img" aria-label="Comfortable resort room surrounded by greenery"></div>
+            <div class="room-details">
+              <p class="room-type">Simple and serene</p>
+              <h3>Standard Room</h3>
+              <p>A calm, comfortable retreat for a well-deserved change of pace.</p>
+              <a href="#booking" data-room="Standard Room">Book this stay <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking-section" id="booking" aria-labelledby="booking-title">
+        <div class="booking-layout section-shell">
+          <div class="booking-intro">
+            <p class="eyebrow">Your getaway starts here</p>
+            <h2 id="booking-title">Let's plan your <em>stay.</em></h2>
+            <p>Share a few details and our team can help you plan a relaxing resort escape.</p>
+            <div class="booking-note">
+              <span aria-hidden="true">✳</span>
+              <p>Have a special occasion or request? Let us know and we’ll do our best to make it special.</p>
+            </div>
+          </div>
+
+          <div class="booking-card">
+            <form id="bookingForm" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="fullName">Full name <span aria-hidden="true">*</span></label>
+                  <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Your full name" required />
+                  <small class="error-message" aria-live="polite"></small>
+                </div>
+                <div class="field">
+                  <label for="email">Email address <span aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+                  <small class="error-message" aria-live="polite"></small>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number" required />
+                  <small class="error-message" aria-live="polite"></small>
+                </div>
+                <div class="field">
+                  <label for="roomType">Room selection <span aria-hidden="true">*</span></label>
+                  <select id="roomType" name="roomType" required>
+                    <option value="">Choose your room</option>
+                    <option value="Deluxe Suite">Deluxe Suite</option>
+                    <option value="Ocean View Villa">Ocean View Villa</option>
+                    <option value="Standard Room">Standard Room</option>
+                    <option value="Family Suite">Family Suite</option>
+                  </select>
+                  <small class="error-message" aria-live="polite"></small>
+                </div>
+                <div class="field">
+                  <label for="checkIn">Check-in <span aria-hidden="true">*</span></label>
+                  <input id="checkIn" name="checkIn" type="date" required />
+                  <small class="error-message" aria-live="polite"></small>
+                </div>
+                <div class="field">
+                  <label for="checkOut">Check-out <span aria-hidden="true">*</span></label>
+                  <input id="checkOut" name="checkOut" type="date" required />
+                  <small class="error-message" aria-live="polite"></small>
+                </div>
+                <div class="field">
+                  <label for="adults">Adults <span aria-hidden="true">*</span></label>
+                  <select id="adults" name="adults" required>
+                    <option value="">Select adults</option>
+                    <option value="1">1 adult</option>
+                    <option value="2">2 adults</option>
+                    <option value="3">3 adults</option>
+                    <option value="4">4 adults</option>
+                    <option value="5">5 adults</option>
+                    <option value="6">6 adults</option>
+                  </select>
+                  <small class="error-message" aria-live="polite"></small>
+                </div>
+                <div class="field">
+                  <label for="children">Children</label>
+                  <select id="children" name="children">
+                    <option value="0">No children</option>
+                    <option value="1">1 child</option>
+                    <option value="2">2 children</option>
+                    <option value="3">3 children</option>
+                    <option value="4">4 children</option>
+                    <option value="5">5 children</option>
+                  </select>
+                </div>
+                <div class="field full-width">
+                  <label for="specialRequests">Special requests <span class="optional">(optional)</span></label>
+                  <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Tell us about any preferences or special occasions"></textarea>
+                </div>
+              </div>
+              <div class="form-footer">
+                <p><span aria-hidden="true">*</span> Required fields</p>
+                <div class="action-row">
+                  <button type="button" id="checkAvailability" class="button button-outline">Check dates</button>
+                  <button type="submit" class="button button-primary">Request to book <span aria-hidden="true">→</span></button>
+                </div>
+              </div>
+              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand-footer" href="#home">
+        <span class="brand-mark" aria-hidden="true">PH</span>
+        <span class="brand-name">Palm Haven <span>Resort</span></span>
+      </a>
+      <p>A little closer to paradise.</p>
+      <a href="#booking">Plan your stay <span aria-hidden="true">↑</span></a>
+    </footer>
+
+    <div id="successModal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalMessage">
+      <div class="modal-content">
+        <div class="modal-icon" aria-hidden="true">✓</div>
+        <p class="eyebrow">Request received</p>
+        <h2 id="modalTitle">Thank you!</h2>
+        <p id="modalMessage"></p>
+        <p class="demo-notice">This is a website demo; no booking details have been sent to a resort.</p>
+        <button type="button" id="closeModal" class="button button-primary">Back to the resort</button>
+      </div>
+    </div>
+  </body>
+</html>
